@@ -1,33 +1,66 @@
-/*import { useState } from "react";
+import './index.scss'
 
+import { useState } from "react";
+import { SignoFunction } from '../../services/Signo';
 
 
 
 
 export default function Signo(){
 
-    const [mes,setMes] = useState("");
-    const [dia,setDia] = useState("");
-    const [resultado,setResultado] = useState ("");
+    const [dia, setDia ] = useState (0);
+    const [mes, setMes]  = useState ('');
+    const [resul, setResul] = useState (false);
 
-    function verificar() {
-        const resp = verificarLibra(mes, dia)
-        setResultado(resultado);
+    async function SignoLibra(){
+        const resposta = await SignoFunction(dia, mes)
+        setResul(resposta) 
     }
 
 
-
     return(
-        <main className="page-exercicio-2">
-            <h1>Exercicio 2 - Signo</h1>
-            <p>Mês</p>
-            <input type='text' value={ mes } onChange={e => setMes (e.target.value)} />
-           <p>dia</p>
-            <input type='text' value={dia} onChange= {e => setDia(e.target.value)} />
-            <button onClick={verificarClick} >Verificar Signo</button>
-        <div>
-    <span>{`É do signo de Libra? ${Result}`}</span>
-    </div>
-        </main>
+
+        <section className='Signo'>
+            <Link className='Link-Voltar' to='/'> &lsaquo; voltar</Link>
+            <h1 className='Titulo-Signo'> Seu Signo o é Libra? </h1>
+            <div className='Fundo'>
+                <div>
+
+                    <div>
+                        <label>Digite o mês:</label>
+                        <input 
+                            type="text" 
+                            value={mes} 
+                            onChange={e => setMes(e.target.value)}/>
+                    </div>
+
+                    <div>
+                        <label>Digite o dia:</label>
+                        <input 
+                            type="number" 
+                            value={dia} 
+                            onChange={e => setDia(e.target.value)}
+                            onKeyPress={e => e.key === 'Enter' ? SignoLibra() : ''}/>
+                    </div>
+
+                    <div className='resul-button'>
+                        <div>
+                            <button onClick={SignoLibra}> Checar </button> 
+                        </div>
+                        <div className='Resultado-Signo'> 
+                            {resul === true ? 'Signo é Libras? Sim' : 'Signo é Libras? Não'}
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
     )
-}*/
+}
+
+
+
+
+
