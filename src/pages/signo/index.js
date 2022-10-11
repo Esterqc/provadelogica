@@ -21,7 +21,6 @@ export default function Signo(){
     return(
 
         <section className='Signo'>
-            <Link className='Link-Voltar' to='/'> &lsaquo; voltar</Link>
             <h1 className='Titulo-Signo'> Seu Signo o é Libra? </h1>
             <div className='Fundo'>
                 <div>
