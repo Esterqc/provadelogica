@@ -33,7 +33,7 @@ export default function Salario(){
             </div>
             <button onClick ={calcularClick}> Calcular </button>
             <div>
-            <span> {mensagem} </span>
+            <span> O Seu Salario Liquido é de R$ {mensagem} </span>
             </div>
         </main>
     )

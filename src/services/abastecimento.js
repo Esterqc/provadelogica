@@ -1,8 +1,7 @@
-export default function calcularParadas(capac, consumo, dist){
-    const litros = dist / consumo;
-    const qtdParadas = litros / capac;
+export default async function calcularParadas(capac, consumo, dist){
+    let calc=  await dist / consumo / capac;
 
-    qtdParadas = Math.ceil(qtdParadas);
+  
 
-    return `Você precisará fazer ${qtdParadas} paradas para abastecer`
+    return Math.ceil(calc);
 }

@@ -11,8 +11,8 @@ export default function Abastecimento(){
     const [dist, setDist] = useState(0)
     const [mensagem, setMensagem] = useState(0)
   
-    function calcularClick() {
-        const calc = calcularParadas(capac, consumo, dist, mensagem)
+   async function calcularClick() {
+        const calc = await calcularParadas(capac, consumo, dist, mensagem)
         setMensagem(calc)
     }
      
@@ -37,7 +37,7 @@ export default function Abastecimento(){
             </div>
             <button onClick ={calcularClick}> Calcular </button>
             <div>
-            <span> {mensagem} </span>
+            <span>   Você precisará fazer {mensagem} paradas para abastecer. </span>
             </div>
         </main>
     )
