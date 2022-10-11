@@ -1,15 +1,27 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
-import Acai from './pages/acai';
-import Signo from './pages/signo';
+import Home from './pages/home'
+import Acai from './pages/acai'
+import Signo from './pages/signo'
+import Peso from './pages/peso'
+import Salario from './pages/salario'
+import Abastecimento from './pages/abastecimento'
+import Temperatura from './pages/temperatura'
 
-export default function Index() {
-    return (
-      <BrowserRouter>
+
+
+
+export default function Index(){
+return(
+    <BrowserRouter>
         <Routes>
-          <Route path='/acai' element={<Acai />} />
-          <Route path='/signo' element={<Signo />} />
-          </Routes>
+            <Route path={'/'} element={<Home />} />
+            <Route path={'/exercicio1'} element={<Acai />} />
+            <Route path={'/exercicio2'} element={<Signo />} />
+            <Route path={'/exercicio3'} element={<Peso />} />
+            <Route path={'/exercicio4'} element={<Salario />} />
+            <Route path={'/exercicio5'} element={<Abastecimento />} />
+            <Route path={'/exercicio6'} element={<Temperatura />} />/*
+        </Routes>
     </BrowserRouter>
-  )
-}
+)}
