@@ -1,7 +1,7 @@
 export default function calcularSalario(salario, bonus, desc){
-    const subTotal = salario + bonus + desc;
-    const valor = subTotal * (desc / 100)
-    const total = subTotal - valor;
+
+    const desconto = salario * (bonus / 100);
+    const total = salario + desconto - desc;
 
     return `Seu salário líquido é de R$ ${total}`;
 }

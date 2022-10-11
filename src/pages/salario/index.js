@@ -4,7 +4,7 @@ import { useState } from 'react'
 import calcularSalario from '../../services/salario'
 
 
-export default function salario(){
+export default function Salario(){
 
     const [salario, setSalario] = useState(0)
     const [bonus, setBonus] = useState(0)
