@@ -17,7 +17,7 @@ export default function Salario(){
     }     
 
     return(
-        <main className='page-exercicio-1'>
+        <main className='page-exercicios'>
             <h1>Exercicio 4 - Salário</h1>
             <div className='input'>
                 <label>Salário</label>

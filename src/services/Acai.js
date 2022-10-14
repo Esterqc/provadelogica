@@ -1,9 +1,9 @@
-export default function calcularAcai(pequenos, medios, grandes, porcentagem) {
-    pequenos = pequenos * 13.50;
-    medios = medios * 15;
-    grandes = grandes * 17.50;
+export default function calcularAcai(pequeno, medio, grande, porcentagem) {
+    pequeno = pequeno * 13.50;
+    medio = medio * 15;
+    grande = grande * 17.50;
 
-    const subTotal = pequenos + medios + grandes;
+    const subTotal = pequeno + medio + grande;
     const valor = subTotal * (porcentagem / 100)
     const total = subTotal - valor;
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import  calcularSorvete from '../../services/Sorvete'
+import  calcularSorvete from '../../services/sorvete'
 import './index.scss'
 
 
@@ -15,18 +15,16 @@ export default function Index() {
     }
 
     return (
-        <main>
+        <main className="page-exercicios">
             <h3> Exercicio 3  Sorvete </h3>
 
-            <div>
+            <div className="input">
                 <p> Quantidade de gramas </p>
                 <input type='number' value={gramas} onChange={e => setGramas(e.target.value)} />
-
-                <button onClick={calcularClick}> calcular</button>
-
-                <div>
-                    <span>O total à pagar é R$ {resposta}  </span>
-                </div>
+            </div>
+            <button onClick={calcularClick}> calcular</button>
+            <div>
+                <span>O total à pagar é R$ {resposta}  </span>
             </div>
         </main>
     )

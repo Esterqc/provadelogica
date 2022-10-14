@@ -1,9 +1,9 @@
 import './index.scss'
 import { useState } from 'react'
-import calcularAcai from '../../services/acai';
+import totalCompra from '../../services/totalCompra';
 
 
-export default function Acai() {
+export default function TotalCompra() {
 
     const [qtdPeq, setQtdPeq] = useState(0)
     const [qtdMed, setQtdMed] = useState(0)
@@ -12,13 +12,13 @@ export default function Acai() {
     const [mensagem, setMensagem] = useState(0)
 
     function calcularClick() {
-        const resultado = calcularAcai(qtdPeq, qtdMed, qtdGra, Desc)
+        const resultado = totalCompra(qtdPeq, qtdMed, qtdGra, Desc)
         setMensagem(resultado)
     }
 
     return (
         <main className='page-exercicios'>
-            <h1>Exercicio 1 - Açai</h1>
+            <h1>Exercicio 7 - Total da Compra</h1>
             <div className='input'>
                 <label>Pequeno </label>
                 <input type='number' value={qtdPeq} onChange={e => Number(setQtdPeq(e.target.value))}></input>

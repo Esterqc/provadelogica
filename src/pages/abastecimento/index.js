@@ -15,13 +15,9 @@ export default function Abastecimento(){
         const calc = await calcularParadas(capac, consumo, dist, mensagem)
         setMensagem(calc)
     }
-     
-
-
-
 
     return(
-        <main className='page-exercicio-1'>
+        <main className='page-exercicios'>
             <h1>Exercicio 1 - Quantas Paradas</h1>
             <div className='input'>
                 <label>Capacidade</label>
@@ -37,7 +33,7 @@ export default function Abastecimento(){
             </div>
             <button onClick ={calcularClick}> Calcular </button>
             <div>
-            <span>   Você precisará fazer {mensagem} paradas para abastecer. </span>
+            <span>   Você precisará fazer {mensagem} paradas para abastecer </span>
             </div>
         </main>
     )

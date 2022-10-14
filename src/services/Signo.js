@@ -1,4 +1,4 @@
-export async function SignoFunction (dia, mes){
+export function SignoFunction (dia, mes){
     let msg = false;
 
     mes = mes.toLowerCase()
@@ -8,5 +8,6 @@ export async function SignoFunction (dia, mes){
     {
         msg = true;
     }
+    
     return msg;
 }

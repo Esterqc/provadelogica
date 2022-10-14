@@ -13,17 +13,15 @@ export default function Index(){
   }
 
   return(
-    <main className='page-exercicio-6'>
+    <main className='page-exercicios'>
         <h3>Exercicio 6 Febre</h3>
-        <div>
+        <div className="input">
             <p>Verificar Temperatura</p>
             <input type='number' value={temperatura} onChange={e => setTemperatura(e.target.value)} />
-
-            <button onClick={calcularTemperatura}>Verificar</button>
-
-            <div>
-                <span>A Situação Para Sua Temperatura é{resposta}</span>
-            </div>
+        </div>
+        <button onClick={calcularTemperatura}>Verificar</button>
+        <div>
+            <span>A Situação Para Sua Temperatura é {resposta}</span>
         </div>
     </main>
   )

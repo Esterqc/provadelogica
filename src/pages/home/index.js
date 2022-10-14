@@ -29,8 +29,19 @@ export default function Index(){
         navigate('/exercicio6')
     }
 
+    function totalCompra(){
+        navigate('/exercicio7')
+    }
+
+    function totalPagamento(){
+        navigate('/exercicio8')
+    }
+
     return(
         <main>
+            <h4>Rayssa Rodrigues Nº 42</h4>
+            <h4>Ester Queiroz Nº ??</h4>
+
             <h2> PROVA - RESOLUÇÕES DE EXERCÍCIOS </h2>
 
             <div onClick={acai}>
@@ -50,6 +61,12 @@ export default function Index(){
             </div>
             <div onClick={temperatura}>
                 Exercício 6 - Temperatura
+            </div>
+            <div onClick={totalCompra}>
+                Exercício 7 - Total da Compra
+            </div>
+            <div onClick={totalPagamento}>
+                Exercício 8 - Total Pagamento
             </div>
         </main>
     )

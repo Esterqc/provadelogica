@@ -1,52 +1,52 @@
 import './index.scss'
 
 import { useState } from "react";
-import { SignoFunction } from '../../services/Signo';
+import { SignoFunction } from '../../services/signo';
 
 
 
 
-export default function Signo(){
+export default function Signo() {
 
-    const [dia, setDia ] = useState (0);
-    const [mes, setMes]  = useState ('');
-    const [resul, setResul] = useState (false);
+    const [dia, setDia] = useState(0);
+    const [mes, setMes] = useState('');
+    const [resul, setResul] = useState(false);
 
-    async function SignoLibra(){
+    async function SignoLibra() {
         const resposta = await SignoFunction(dia, mes)
-        setResul(resposta) 
+        setResul(resposta)
     }
 
 
-    return(
+    return (
 
-        <section className='Signo'>
+        <section className='page-exercicios'>
             <h1 className='Titulo-Signo'> Seu Signo o é Libra? </h1>
             <div className='Fundo'>
                 <div>
 
-                    <div>
+                    <div className='input'>
                         <label>Digite o mês:</label>
-                        <input 
-                            type="text" 
-                            value={mes} 
-                            onChange={e => setMes(e.target.value)}/>
+                        <input
+                            type="text"
+                            value={mes}
+                            onChange={e => setMes(e.target.value)} />
+                    </div>
+
+                    <div className='input'>
+                        <label>Digite o dia:</label>
+                        <input
+                            type="number"
+                            value={dia}
+                            onChange={e => setDia(e.target.value)}
+                            onKeyPress={e => e.key === 'Enter' ? SignoLibra() : ''} />
                     </div>
 
                     <div>
-                        <label>Digite o dia:</label>
-                        <input 
-                            type="number" 
-                            value={dia} 
-                            onChange={e => setDia(e.target.value)}
-                            onKeyPress={e => e.key === 'Enter' ? SignoLibra() : ''}/>
-                    </div>
-
-                    <div className='resul-button'>
                         <div>
-                            <button onClick={SignoLibra}> Checar </button> 
+                            <button onClick={SignoLibra}> Verificar </button>
                         </div>
-                        <div className='Resultado-Signo'> 
+                        <div>
                             {resul === true ? 'Signo é Libras? Sim' : 'Signo é Libras? Não'}
                         </div>
                     </div>

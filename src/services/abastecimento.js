@@ -1,7 +1,5 @@
-export default async function calcularParadas(capac, consumo, dist){
-    let calc=  await dist / consumo / capac;
+export default function calcularParadas(capac, consumo, dist){
+    const resultado = dist / consumo / capac;
 
-  
-
-    return Math.ceil(calc);
+    return Math.ceil(resultado);
 }
