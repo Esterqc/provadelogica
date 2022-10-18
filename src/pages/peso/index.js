@@ -1,5 +1,5 @@
 import { useState } from "react";
-import  calcularSorvete from '../../services/sorvete'
+import  calcularSorvete from '../../services/Sorvete'
 import './index.scss'
 
 

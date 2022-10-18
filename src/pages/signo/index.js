@@ -1,7 +1,7 @@
 import './index.scss'
 
 import { useState } from "react";
-import { SignoFunction } from '../../services/signo';
+import { SignoFunction } from '../../services/Signo';
 
 
 

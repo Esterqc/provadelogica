@@ -9,7 +9,7 @@ import Abastecimento from './pages/abastecimento'
 import Temperatura from './pages/temperatura'
 import TotalCompra from './pages/totalCompra'
 import TotalPagamento from './pages/totalPagamento'
-
+import NumerosNaturais from './pages/naturais';
 
 
 
@@ -26,6 +26,7 @@ return(
             <Route path={'/exercicio6'} element={<Temperatura />} />
             <Route path={'/exercicio7'} element={<TotalCompra />} />
             <Route path={'/exercicio8'} element={<TotalPagamento />} />
+            <Route path={'/exercicio9'} element ={<NumerosNaturais />} />
         </Routes>
     </BrowserRouter>
 )}
