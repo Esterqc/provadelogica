@@ -1,6 +1,7 @@
-import { useState } from "react";
-import   calcularFebre  from '../../services/febre';
 import './index.scss'
+import { useState } from "react";
+
+import   calcularFebre  from '../../services/febre';
 
 
 export default function Index(){
@@ -8,8 +9,8 @@ export default function Index(){
     const [resposta,setResposta] = useState ();
 
   function calcularTemperatura(){
-    const febr = calcularFebre(temperatura);
-    setResposta(febr ); 
+    const resultado = calcularFebre(temperatura);
+    setResposta(resultado); 
   }
 
   return(

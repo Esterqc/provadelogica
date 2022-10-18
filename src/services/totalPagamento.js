@@ -1,15 +1,15 @@
-export default function totalPagamento(qtdInteiras, qtdMeias, dia, pais) {
+export default function totalPagamento(inteiras, meias, diaSemana, nacional) {
     let msg = 0
 
-    if(pais == "nacional") {
-        msg = (qtdInteiras + qtdMeias) * 5.0;
+    if(nacional == true) {
+        msg = (inteiras + meias) * 5.0;
     }
     else {
-        if (dia == "quarta-feira") {
-            msg = (qtdInteiras + qtdMeias) * (28.5 / 2);
+        if (diaSemana == "quarta-feira") {
+            msg = (inteiras + meias) * (28.5 / 2);
         }
         else {
-            msg = (qtdInteiras * 28.5) + (qtdMeias * 28.5) / 2;
+            msg = (inteiras * 28.5) + (meias * 28.5) / 2;
         }
     }
 }

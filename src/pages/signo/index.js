@@ -1,6 +1,6 @@
 import './index.scss'
-
 import { useState } from "react";
+
 import { SignoFunction } from '../../services/signo';
 
 
@@ -12,11 +12,10 @@ export default function Signo() {
     const [mes, setMes] = useState('');
     const [resul, setResul] = useState(false);
 
-    async function SignoLibra() {
-        const resposta = await SignoFunction(dia, mes)
+    function SignoLibra() {
+        const resposta =  SignoFunction(dia, mes)
         setResul(resposta)
     }
-
 
     return (
 

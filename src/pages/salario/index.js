@@ -12,8 +12,8 @@ export default function Salario(){
     const [mensagem, setMensagem] = useState(0)
 
     function calcularClick() {
-        const valorfinal = calcularSalario(salario, bonus, desc, mensagem)
-        setMensagem(valorfinal)
+        const resultado = calcularSalario(salario, bonus, desc, mensagem)
+        setMensagem(resultado)
     }     
 
     return(

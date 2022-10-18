@@ -1,6 +1,7 @@
-import { useState } from "react";
-import  calcularSorvete from '../../services/sorvete'
 import './index.scss'
+import { useState } from "react";
+
+import  calcularSorvete from '../../services/sorvete'
 
 
 
@@ -10,8 +11,8 @@ export default function Index() {
     const [resposta, setResposta] = useState();
 
     function calcularClick() {
-        const tot = calcularSorvete(gramas);
-        setResposta(tot); 
+        const resultado = calcularSorvete(gramas);
+        setResposta(resultado); 
     }
 
     return (
