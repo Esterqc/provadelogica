@@ -1,6 +1,6 @@
-export default function linha(qtd) {
+export default function calcularLinha(qtd) {
     
     for(let i = 0; i <= qtd; i++){
-        process.stdout.write('*')
+        console.writeLine('*')
     }
 }

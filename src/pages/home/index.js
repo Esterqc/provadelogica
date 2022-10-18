@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import NumerosNaturais from '../naturais';
 
 
 
@@ -37,9 +38,14 @@ export default function Index(){
         navigate('/exercicio8')
     }
 
-    function totalPagamento(){
+    function NumerosNaturais(){
         navigate('/exercicio9')
     }
+
+    function calcularLinha(){
+        navigate('/exercicio10')
+    }
+
 
     return(
         <main>
@@ -72,8 +78,11 @@ export default function Index(){
             <div onClick={totalPagamento}>
                 Exercício 8 - Total Pagamento
             </div>
-            <div onClick={totalPagamento}>
-                Exercício  - Numeros Naturais
+            <div onClick={NumerosNaturais}>
+                Exercício 9 - Numeros Naturais
+            </div>
+            <div onClick={calcularLinha}>
+                Exercício 10 - Linha Asterisco
             </div>
         </main>
     )
