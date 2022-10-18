@@ -1,6 +1,8 @@
 export default function Numero(inicio,fim){
-
-    for(let inicio = 0; inicio <= fim; inicio++){
-        process.stdout.write(inicio)
+    let arr = []
+    
+    for(let i = inicio; i <= fim; i++){
+        arr.push(i)
     }
+    return arr;
 }
