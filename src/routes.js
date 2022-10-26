@@ -11,6 +11,7 @@ import TotalCompra from './pages/totalCompra'
 import TotalPagamento from './pages/totalPagamento'
 import NumerosNaturais from './pages/naturais';
 import Linha from './pages/linha';
+import CalcularMedia from './pages/media';
 
 
 
@@ -29,6 +30,7 @@ return(
             <Route path={'/exercicio8'} element={<TotalPagamento />} />
             <Route path={'/exercicio9'} element ={<NumerosNaturais />} />
             <Route path={'/exercicio10'} element={<Linha />} />
+            <Route path={'/exercicio12'} element={< CalcularMedia/>} />
         </Routes>
     </BrowserRouter>
 )}
